@@ -1,0 +1,66 @@
+{
+	"info": {
+		"_postman_id": "bf24c964-565d-4d1b-bde7-5059f9268684",
+		"name": "Chat Goal App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "22001947",
+		"_collection_link": "https://planetary-trinity-359169.postman.co/workspace/New-Team-Workspace~7e076ca4-d7f0-4ef5-b46e-22ef49984dd8/collection/22001947-bf24c964-565d-4d1b-bde7-5059f9268684?action=share&creator=22001947&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Start",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:6000"
+			},
+			"response": []
+		},
+		{
+			"name": "Ask Question [FE-user]",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"question\": \"what role cows have played in human civilization?\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:6000/api/v1/question"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete existing Doc",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": "localhost:6000/api/v1/removeDir"
+			},
+			"response": []
+		},
+		{
+			"name": "New Doc Update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Mushfiq/Desktop/cow.txt"
+						}
+					]
+				},
+				"url": "localhost:6000/api/v1/docUpdate"
+			},
+			"response": []
+		}
+	]
+}
